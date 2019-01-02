@@ -1,0 +1,157 @@
+@import 'normalize';
+//Initialize Variables
+$dark: #424652;
+$light: #9a9da4;
+$highlight: #07c2a5;
+$white-color: #ffffff;
+$border: #E9E9E9;
+$dark-bg: #4e4e4e; 
+$light-bg: #dedede;
+
+html{
+    font-size: 1rem!important;
+}
+body{
+    font-size: 1rem!important;
+    font-family: 'Raleway', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p,ul,li{
+    color: $dark;
+    list-style: none;
+}
+h1{
+    font-size: 2.5rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.75rem;
+}
+h4{
+    font-size: 1.375rem;
+}
+h5{
+    font-size: 1.25rem;
+}
+h6{
+    font-size: 1rem;
+}
+p,li{
+    font-size: 1.1rem;
+    line-height: 1.75em;
+}
+p,ul,ol{
+    margin: 0 0 1.6em 0;
+}
+//clearfix class
+.clearfix:before, .clearfix:after{
+    content: " ";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+.accent-color{
+    color: $highlight!important;
+}
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+.wrapper-padding{
+    padding: 4em 0;
+}
+a{
+    transition: color 0.25s ease;    
+}
+//Initialize #main_navigation style
+ #main_navigation {
+     padding: 1em 5%;
+    //  border-bottom: 1px solid $border;
+     width: 100%;
+     position: fixed;
+     top: 0;
+     z-index: 999;
+     background: transparent;
+     transition: background-color 0.7s ease;
+     &.fixed-top{
+         background-color: rgba(0, 0, 0, 0.7);
+         padding: 0px 5%;
+         .logo{
+             transform: scale(0.7);
+         }
+     }
+     .logo{
+         font-weight: 700;
+         font-size: 0.8em;
+         letter-spacing: 6px;
+         text-transform: uppercase;
+         border: 2px solid $highlight;
+         padding: 0.75rem 1em;
+         text-decoration: none;
+         color: $dark;
+         float: left;
+     }
+     &.dark-bg{
+         nav{
+             a{
+                 color: $white-color;
+             }
+         }
+     }
+     nav {
+         float: right;
+         padding-top: 0.6rem; 
+         a{
+             color: $dark;
+             text-decoration: none;
+             margin: 0 1rem;
+             font-size: 1rem;
+             &:hover{
+                 color: $highlight;
+             }
+         }
+     }
+    //  &+div{
+    //      padding-top: 76px;
+    //  }
+ }
+ footer{
+     &#main-footer{
+         padding: 50px 0;
+         p.copy{
+             margin-bottom: 20px;
+             text-align: center;
+             font-size: 1.250rem;
+             span{
+                 color: #ef0202;
+             }
+         }
+         ul{
+             padding: 0;
+             margin: 0 auto;
+             text-align: center;
+             li{
+                 margin-right: 25px;
+                 display: inline-block;
+                 &:last-child{
+                     margin-right: 0;
+                 }
+                 a{
+                     color: $highlight;
+                    i{
+                        font-size: 36px;
+                    }
+                    &:hover{
+                        color: darken($color: $highlight, $amount: 8)
+                    }
+                 }
+             }
+         }
+     }
+ }
+@import "home";
